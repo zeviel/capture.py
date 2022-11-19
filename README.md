@@ -4,6 +4,6 @@ Mobile-API for [capture](https://play.google.com/store/apps/details?id=com.captu
 ## Example
 ```python3
 import capture
-client = capture.Client(token="")
-print(f"-- Account user_id is::: {client.user_id}")
+capture = capture.Capture()
+capture.login_with_x_token(x_token="")
 ```
