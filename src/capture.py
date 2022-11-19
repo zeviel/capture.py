@@ -5,16 +5,14 @@ from random import randint
 class Capture:
 	def __init__(
 			self,
-			x_token: str = None,
 			session_id: int = str(randint(1, 9999))) -> None:
 		self.api = "https://capture.chat/api"
 		self.headers = {
 			"user-agent": "15 Android/56 ru-RU",
 			"session-id": session_id
 		}
+		self.x_token = None
 		self.user_id = None
-		if x_token:
-			self.login_with_x_token(x_token)
 
 	def login_with_google(self, google_id_token: str) -> dict:
 		data = {
